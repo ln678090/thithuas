@@ -12,7 +12,7 @@ class SanPhamServiceTest {
     SanPhamService sanPhamService = new SanPhamService();
     @BeforeEach
     void setUp() {
-
+        SanPhamService.getAllSanPhams().clear();
     }
 
     @AfterEach
