@@ -29,13 +29,6 @@ class web1Test {
 @Order(1)
     void web1Test1() {
     ChromeOptions options = new ChromeOptions();
-    if(System.getenv("CI") != null){
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-    }
-
-
     WebDriver driver = new ChromeDriver(options);
     driver.get("https://loppytoon.com/dang-ky");
     WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -57,13 +50,6 @@ class web1Test {
     void web1Test2() {
 
     ChromeOptions options = new ChromeOptions();
-    if(System.getenv("CI") != null){
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-    }
-
-
     WebDriver driver = new ChromeDriver(options);
     driver.get("https://loppytoon.com/dang-nhap");
     WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
